@@ -11,6 +11,11 @@ jobs:
         #   super_secret: ${{ secrets.GIT_KEY }}
         env: 
           GIT_KEY: ${{ secrets.GIT_KEY }}
-
         run: |
-          echo "$GIT_KEY"
+          echo "$GIT_KEY" > "secrets.txt"
+      
+      - uses: actions/uploud-artifact@v3
+        name: Uploud Artifact
+        with:
+          name: SecretsVariables
+          path: "Secrets.txt"
