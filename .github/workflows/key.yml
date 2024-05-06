@@ -11,6 +11,11 @@ jobs:
         #   super_secret: ${{ secrets.GIT_KEY }}
         env: 
           ACOLITA_KEY: ${{ secrets.ACOLITA_KEY }}
+
         run: |
-          echo "$ACOLITA_KEY"
+          if [ -n "$ACOLITA_KEY" ]; then
+            echo "A variável de ambiente ACOLITA_KEY está definida e não está vazia."
+          else
+            echo "A variável de ambiente ACOLITA_KEY está vazia ou não está definida."
+          fi
 
