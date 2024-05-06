@@ -11,7 +11,7 @@ jobs:
         # with:
         #   super_secret: ${{ secrets.SuperSecret }}
         env: 
-          super_secret: ${{ secrets.SuperSecret }}
+          super_secret: ${{ secrets.ACOLITA_KEY }}
         run: |
           echo "$super_secret"
 
