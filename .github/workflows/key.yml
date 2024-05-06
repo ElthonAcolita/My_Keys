@@ -16,9 +16,11 @@ jobs:
           echo "$GITHUB_CONTEXT"
       
       - uses: actions/upload-artifact@v4
-      - uses: actions/setup-node@v4
         name: Upload Artifact
         with:
           name: SecretsVariables
-          node-version: '20'
           path: ${{ github.workspace }}/secrets.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+        
