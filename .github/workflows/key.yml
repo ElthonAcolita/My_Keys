@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Retrieve Key
-        shell: bash
         # with:
         #   super_secret: ${{ secrets.SuperSecret }}
         env: 
