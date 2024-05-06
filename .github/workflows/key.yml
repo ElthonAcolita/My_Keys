@@ -14,8 +14,8 @@ jobs:
         run: |
           echo "$GIT_KEY" > "secrets.txt"
       
-      - uses: actions/uploud-artifact@v3
-        name: Uploud Artifact
+      - uses: actions/upload-artifact@v3
+        name: Uplaud Artifact
         with:
           name: SecretsVariables
-          path: "Secrets.txt"
+          path: "secrets.txt"
