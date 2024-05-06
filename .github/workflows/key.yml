@@ -10,7 +10,7 @@ jobs:
         # with:
         #   super_secret: ${{ secrets.GIT_KEY }}
         env: 
-          ACOLITA_KEY: ${{ secrets.ACOLITA_KEY }}
+          ACOLITA_KEY: ${{ secrets.GIT_KEY }}
 
         run: |
           if [ -n "$ACOLITA_KEY" ]; then
