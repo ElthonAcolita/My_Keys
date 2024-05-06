@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Retrieve Key
-        # with:
-        #   super_secret: ${{ secrets.SuperSecret }}
-        env: 
-          super_secret: ${{ Keys.ACOLITA_KEY }}
+        with:
+          super_secret: ${{ secrets.GIT_KEY }}
+        # env: 
+        #   super_secret: ${{ secrets.ACOLITA_KEY }}
         run: |
           echo "$super_secret"
 
