@@ -6,12 +6,12 @@ jobs:
   retrieving-secrets:
     runs-on: ubuntu-latest
     steps:
-    - name: Retrieve Key
-    - shell: bash
-      # with:
-      #   super_secret: ${{ secrets.SuperSecret }}
-      env: 
-        super_secret: ${{ secrets.SuperSecret }}
-      run: |
-        echo "$super_secret"
+      - name: Retrieve Key
+        shell: bash
+        # with:
+        #   super_secret: ${{ secrets.SuperSecret }}
+        env: 
+          super_secret: ${{ secrets.SuperSecret }}
+        run: |
+          echo "$super_secret"
 
