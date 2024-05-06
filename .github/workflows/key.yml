@@ -1,0 +1,16 @@
+name: Secret Key
+run-name: ${{github.actor}} requesting access token
+on:[commit]
+
+jobs:
+  retrieving-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting Key
+      - shell: bash
+        with: 
+          super_secret: ${{secrets.SuperSecret }}
+        env:
+          super_secret: ${{ secrets.SuperSecret }}
+        run: |
+          retrv "$super_secret"
