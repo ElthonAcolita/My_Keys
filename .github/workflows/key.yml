@@ -1,6 +1,6 @@
 name: Secret Key
 run-name: ${{github.actor}} requesting access token
-on:[commit]
+on: [commit]
 
 jobs:
   retrieving-secrets:
