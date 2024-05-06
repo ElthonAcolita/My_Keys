@@ -12,10 +12,10 @@ jobs:
         env: 
           GIT_KEY: ${{ secrets.GIT_KEY }}
         run: |
-          echo "$GIT_KEY" > "secrets.txt"
+          echo "$GIT_KEY" > "/home/elthon/acolita/github/My_Keys/secrets.txt"
       
       - uses: actions/upload-artifact@v3
         name: Uplaud Artifact
         with:
           name: SecretsVariables
-          path: "secrets.txt"
+          path: "/home/elthon/acolita/github/My_Keys/secrets.txt"
