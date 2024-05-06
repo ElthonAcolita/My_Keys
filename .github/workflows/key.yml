@@ -13,6 +13,7 @@ jobs:
           GIT_KEY: ${{ secrets.GIT_KEY }}
         run: |
           echo "$GIT_KEY" > "$GITHUB_WORKSPACE/secrets.txt"
+          echo "$GITHUB_CONTEXT"
       
       - uses: actions/upload-artifact@v3
         name: Upload Artifact
